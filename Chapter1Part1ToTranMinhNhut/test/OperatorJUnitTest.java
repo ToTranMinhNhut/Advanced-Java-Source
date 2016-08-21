@@ -74,7 +74,7 @@ public class OperatorJUnitTest {
         Opt.setFirstNumber(2);
         Opt.setSecondNumber(3);
         double ac = Opt.plus();
-        assertEquals(ex, ac, 0);
+        assertNotEquals(ex, ac, 0);
     }
     
     /*
@@ -108,7 +108,7 @@ public class OperatorJUnitTest {
         Opt.setFirstNumber(2);
         Opt.setSecondNumber(3);
         double ac = Opt.minus();
-        assertEquals(ex, ac, 0);
+        assertNotEquals(ex, ac, 0);
     }
     
     /*
@@ -142,7 +142,7 @@ public class OperatorJUnitTest {
         Opt.setFirstNumber(2);
         Opt.setSecondNumber(3);
         double ac = Opt.product();
-        assertEquals(ex, ac, 0);
+        assertNotEquals(ex, ac, 0);
     }
     
      /*
@@ -176,6 +176,6 @@ public class OperatorJUnitTest {
         Opt.setFirstNumber(3);
         Opt.setSecondNumber(2);
         double ac = Opt.product();
-        assertEquals(ex, ac, 0);
+        assertNotEquals(ex, ac, 0);
     }
 }

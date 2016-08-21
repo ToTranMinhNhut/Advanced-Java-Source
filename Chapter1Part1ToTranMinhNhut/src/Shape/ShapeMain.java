@@ -53,13 +53,23 @@ public class ShapeMain {
         double disAB = distanceAB.distanceTwoPoints(pointA, pointB);
         System.out.println("Distance A point and B point: " + disAB);
 
-        // Cirle
+        // Process Cirle
         Cirle c = new Cirle();
         double perimeterCirle = c.calculatePerimeterCirle(distanceAB, pointA, pointB);
         System.out.println("Cirle Perimeter = " + perimeterCirle);
 
         double areaCirle = c.caculateAreaCirle(distanceAB, pointA, pointB);
         System.out.println("Cirle Area = " + areaCirle);
+        
+        // Process Rectangle
+        
+        Rectangle rec = new Rectangle();
+        
+        double perRectangle = rec.calPerimeterRectangle(pointA, pointB);
+        System.out.println("Rectangle Perimeter =  " + perRectangle);
+        
+        double areaRectangle = rec.calAreaRectangle(pointA, pointB);
+        System.out.println("Rectangle Area = " + areaRectangle);
     }
 
 }

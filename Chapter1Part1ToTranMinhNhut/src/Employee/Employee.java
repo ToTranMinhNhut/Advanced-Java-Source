@@ -18,14 +18,18 @@ public class Employee {
     private float coefficient ;
     private int countPeople;
     private double bonus;
-    //private double income;
-    //private double TaxableIncome;
-    //private double personalIncome;
-    //private double netSalary;
 
     public Employee() {
     }
 
+    public Employee(String name, float coefficient, int countPeople, double bonus) {
+        this.name = name;
+        this.coefficient = coefficient;
+        this.countPeople = countPeople;
+        this.bonus = bonus;
+    }
+    
+    
     public String getName() {
         return name;
     }
@@ -57,71 +61,4 @@ public class Employee {
     public void setBonus(double bonus) {
         this.bonus = bonus;
     }
-/*
-    public double getIncome() {
-        return income;
-    }
-
-    public void setIncome(double income) {
-        this.income = income;
-    }
-
-    public double getTaxableIncome() {
-        return TaxableIncome;
-    }
-
-    public void setTaxableIncome(double TaxableIncome) {
-        this.TaxableIncome = TaxableIncome;
-    }
-
-    public double getPersonalIncome() {
-        return personalIncome;
-    }
-
-    public void setPersonalIncome(double personalIncome) {
-        this.personalIncome = personalIncome;
-    }
-
-    public double getNetSalary() {
-        return netSalary;
-    }
-
-    public void setNetSalary(double netSalary) {
-        this.netSalary = netSalary;
-    }
-
-    */
-    
-    public double calculateIncome() {
-        double income = coefficient * basicSalary + bonus;
-        return income;
-    }
-    
-    public double calculateTaxableIncome() {
-        double taxableIncome = 0;
-        double incom = calculateIncome();
-        if (incom )
-    }
-    
-    public double calculateSalary() {
-        double salary = 0;
-        
-        return salary;
-    }
-    
-}
-
-enum Level {
-    LEVEL1(500000, 250000);
-    
-    double income;
-    double tax;
-    
-    private Level(double income, double tax) {
-        this.income = income;
-        this.tax = tax;
-    }
-    
-    public calculateTaxableIncome()
-
 }

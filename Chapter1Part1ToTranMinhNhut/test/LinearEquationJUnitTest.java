@@ -88,7 +88,7 @@ public class LinearEquationJUnitTest {
         double ex = 2;
         linEq = new LinearEquation(0, 0);
         double[] ac = linEq.evalueteRoot();
-        assertEquals(ex, ac[1], 0);
+        assertNotEquals(ex, ac[1], 0);
     }
     
     @Test
@@ -96,7 +96,7 @@ public class LinearEquationJUnitTest {
         double ex = 2;
         linEq = new LinearEquation(0, 2);
         double[] ac = linEq.evalueteRoot();
-        assertEquals(ex, ac[0], 0);
+        assertNotEquals(ex, ac[0], 0);
     }
     
     @Test
@@ -104,7 +104,7 @@ public class LinearEquationJUnitTest {
         double ex = 4;
         linEq = new LinearEquation(1, 4);
         double[] ac = linEq.evalueteRoot();
-        assertEquals(ex, ac[2], 0);
+        assertNotEquals(ex, ac[2], 0);
     }
     
     @Test
@@ -112,7 +112,7 @@ public class LinearEquationJUnitTest {
         double ex = 2.5;
         linEq = new LinearEquation(2, -3);
         double[] ac = linEq.evalueteRoot();
-        assertEquals(ex, ac[2], 0);
+        assertNotEquals(ex, ac[2], 0);
     }
     
     @Test
@@ -120,6 +120,6 @@ public class LinearEquationJUnitTest {
         double ex = 8;
         linEq = new LinearEquation(2, 14);
         double[] ac = linEq.evalueteRoot();
-        assertEquals(ex, ac[2], 0);
+        assertNotEquals(ex, ac[2], 0);
     }
 }
