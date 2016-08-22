@@ -56,9 +56,9 @@ public class Soldier {
     }
 
     /*
-     *
-     *
-     *
+     * This method input information a soldier
+     * Input: not
+     * Output: not
      */
     public void inputInformation() throws IOException {
         BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
