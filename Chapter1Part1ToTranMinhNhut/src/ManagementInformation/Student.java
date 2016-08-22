@@ -80,18 +80,7 @@ public class Student extends Human {
             System.out.println("Error: " + e.toString());
         }
     }
-    
-    /* 
-     * This method print information a student
-     * Input: not
-     * Output: return information value has String type
-    */
-    @Override
-    public String printInformation() {
-        return super.printInformation() + ". The class: " + studyClass
-                + ". Score first semester: " + scoreFirstSemester + ". Score second semester: " + scoreSecondSemester; 
-    }
-    
+
     /*
      * This method calculate average score a student
      * Input: not
@@ -99,6 +88,20 @@ public class Student extends Human {
      */
     public float calAverageScore() {
         return (scoreFirstSemester + scoreSecondSemester) / 2;
+    }
+
+    /* 
+     * This method print information a student
+     * Input: not
+     * Output: return information value has String type
+     */
+    @Override
+    public String printInformation() {
+        float averageScore = calAverageScore();
+        
+        return super.printInformation() + "\n| The class: " + studyClass 
+                + "| Score first semester: " + scoreFirstSemester + "| Score second semester: " + scoreSecondSemester
+                +"\n|Average score: " + averageScore;
     }
 
 }

@@ -82,19 +82,6 @@ public class Teacher extends Human {
         }
     }
     
-    /* 
-     * This method print information a teacher
-     * Input: not
-     * Output: return information value has String type
-    */
-
-    @Override
-    public String printInformation() {
-        return super.printInformation() + ". The class: " + manageClass
-                + ". Coefficient salary: " + coefficient + ". Bonus: " + bonus; 
-    }
-    
-    
     /*
      * This method calculate salary a teacher
      * Input: not
@@ -103,5 +90,19 @@ public class Teacher extends Human {
     public double calSalary() {
         return coefficient * basicSalary + bonus;
     }
-
+    
+    /* 
+     * This method print information a teacher
+     * Input: not
+     * Output: return information value has String type
+    */
+    @Override
+    public String printInformation() {
+        double salary = calSalary();
+        
+        return super.printInformation() + "\n| The class: " + manageClass
+                + "| Coefficient salary: " + coefficient + "| Bonus: " + bonus
+                + "\n| Salary: " + salary; 
+    }
+    
 }

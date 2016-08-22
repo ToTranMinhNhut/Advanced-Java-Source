@@ -96,6 +96,6 @@ public class Human {
      * Output: return information value has String type
     */
     public String printInformation() {
-        return "Name: " + name + ". Birthday: " + birthday + ". Address: " + address + ". Phone number: " + phoneNumber;
+        return "Name: " + name + "| Birthday: " + birthday + "| Address: " + address + "| Phone number: " + phoneNumber;
     }
 }
