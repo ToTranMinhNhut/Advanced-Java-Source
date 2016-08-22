@@ -74,7 +74,8 @@ public class Desktop extends Computer {
      */
     @Override
     public String printInformation() {
-        String info = super.printInformation() + ". CPU information: " + infoCPU + ". RAM information: " + infoRAM;
+        String info = super.printInformation() + "\n| CPU information: " + infoCPU
+                + "| RAM information: " + infoRAM;
         return info;
     }
 

@@ -105,7 +105,8 @@ public class Computer {
      * Output: the 'info' variable has String type, which contain information computervalue
      */
     public String printInformation() {
-        String info = "Information: id:  " + id + ". Unit price: " + price + ". Manufactuer: " + manufacturer;
+        String info = "Id: " + id + "| Unit price: " + price
+                + "| Manufactuer: " + manufacturer + "| Number's Computer: " + number;
         return info;
     }
 }

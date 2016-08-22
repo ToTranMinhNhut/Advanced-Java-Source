@@ -18,41 +18,41 @@ import java.io.InputStreamReader;
  */
 public class Laptop extends Computer {
 
-    private int weight;
-    private int timePin;
-    private int sizeMinitor;
+    private String weight;
+    private String timePin;
+    private String sizeMinitor;
 
     public Laptop() {
     }
 
-    public Laptop(int weight, int timePin, int sizeMinitor, String id, double price, String manufacturer, int number) {
+    public Laptop(String weight, String timePin, String sizeMinitor, String id, double price, String manufacturer, int number) {
         super(id, price, manufacturer, number);
         this.weight = weight;
         this.timePin = timePin;
         this.sizeMinitor = sizeMinitor;
     }
 
-    public int getWeight() {
+    public String getWeight() {
         return weight;
     }
 
-    public void setWeight(int weight) {
+    public void setWeight(String weight) {
         this.weight = weight;
     }
 
-    public int getTimePin() {
+    public String getTimePin() {
         return timePin;
     }
 
-    public void setTimePin(int timePin) {
+    public void setTimePin(String timePin) {
         this.timePin = timePin;
     }
 
-    public int getSizeMinitor() {
+    public String getSizeMinitor() {
         return sizeMinitor;
     }
 
-    public void setSizeMinitor(int sizeMinitor) {
+    public void setSizeMinitor(String sizeMinitor) {
         this.sizeMinitor = sizeMinitor;
     }
 
@@ -67,13 +67,13 @@ public class Laptop extends Computer {
         BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
         try {
             System.out.println("Please enter weigth of laptop: ");
-            weight = Integer.parseInt(input.readLine());
+            weight = input.readLine();
 
             System.out.println("Please enter time for using pin; ");
-            timePin = Integer.parseInt(input.readLine());
+            timePin = input.readLine();
 
             System.out.println("Please enter size of minitor: ");
-            sizeMinitor = Integer.parseInt(input.readLine());
+            sizeMinitor = input.readLine();
         } catch (NumberFormatException e) {
             System.out.println("Error: " + e.toString());
         }
@@ -86,7 +86,8 @@ public class Laptop extends Computer {
      */
     @Override
     public String printInformation() {
-        String info = super.printInformation() + ". Weight: " + weight + ". Time for using pin: " + timePin + ". Size of minitor: " + sizeMinitor;
+        String info = super.printInformation() + "\n| Weight: " + weight
+                + "| Time for using pin: " + timePin + "| Size of minitor: " + sizeMinitor;
         return info;
     }
 
