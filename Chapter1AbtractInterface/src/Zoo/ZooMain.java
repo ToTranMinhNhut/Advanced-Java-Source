@@ -32,7 +32,10 @@ public class ZooMain {
 		Fish[] listFish = new Fish[max];
 		Boa[] listBoa = new Boa[max];
 
-		ListBirth listA = new ListBirth();
+		ListBirth listB = new ListBirth();
+		ListTiger listT = new ListTiger();
+		ListFist listF = new ListFist();
+		ListBoa listBo = new ListBoa();
 
 		int indexB = 0;
 		int indexT = 0;
@@ -50,19 +53,55 @@ public class ZooMain {
 			} catch (NumberFormatException e) {
 				System.out.println("Error: " + e.toString());
 			}
-			
+
 			if (opt == 1) {
-				listBirth = listA.addBirthtoList(listBirth, indexB);
-				
+
+				listBirth = listB.addBirthtoList(listBirth, indexB);
 				int numOfBirths = indexB + 1;
-				listA.printListBirth(listBirth, numOfBirths);
-				indexB++;
+				listB.printListBirth(listBirth, numOfBirths);
+
 			} else if (opt == 2) {
-				
+
+				listTiger = listT.addTigertoList(listTiger, indexT);
+				int numOfTigers = indexT + 1;
+				listT.printListTiger(listTiger, numOfTigers);
+
 			} else if (opt ==3) {
+
+				listFish = listF.addFishttoList(listFish, indexF);
+				int numOfFishes = indexF + 1;
+				listF.printListFish(listFish, numOfFishes);
+
+			} else if (opt == 4){
+				
+				listBoa = listBo.addBoatoList(listBoa, indexBoa);
+				int numOfBoas = indexBoa + 1;
+				listBo.printListBoa(listBoa, numOfBoas);
 				
 			} else {
 				throw new ArithmeticException("Please enter 1 or 2 or 3");
+			}
+
+			try {
+				System.out.println("Do you continue? Please choose <1 (Yes) / 0 (No)>:");
+				nextStep = Integer.parseInt(input.readLine());
+			} catch (NumberFormatException e) {
+				System.out.println("Error: " + e.toString());
+			}
+
+			if (nextStep != 0 && nextStep != 1) {
+				throw new ArithmeticException("Please only enter 1 or 0");
+			} else if (nextStep == 1) {
+
+				if (opt == 1) {
+					indexB++;
+				} else if (opt == 2) {
+					indexT++;
+				} else if (opt == 3) {
+					indexF++;
+				} else if (opt == 4) {
+					indexBoa++;
+				}
 			}
 		}
 	}
