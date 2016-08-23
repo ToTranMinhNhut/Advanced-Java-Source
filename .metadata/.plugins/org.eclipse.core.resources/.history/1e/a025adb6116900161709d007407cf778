@@ -1,0 +1,32 @@
+/**
+ * 
+ */
+package Zoo;
+
+/**
+ * @author hv
+ * @version 1.0
+ * @date 23/8/2016
+ */
+public class Birth extends Animal implements Fly, ResidentNest, Growth {
+	
+	public Birth(){
+	}
+
+	@Override
+	public String growth() {
+		return "Growth normally.";
+	}
+
+	@Override
+	public String residentNest() {
+		return "Live in nest.";
+	}
+
+	@Override
+	public String fly() {
+		return "fly";
+	}
+	
+	
+}

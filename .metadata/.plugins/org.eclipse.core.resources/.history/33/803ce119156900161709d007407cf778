@@ -1,0 +1,29 @@
+/**
+ * 
+ */
+package Zoo;
+
+/**
+ * @author hv
+ * @version 1.0
+ * @date 23/8/2016
+ */
+public class ListBirth {
+	
+	public ListBirth() {
+		
+	}
+	
+	public Birth[] addBirthtoList(Birth[] listB, int index) {
+		
+		if (index > 50) {
+			throw new ArithmeticException("the number birth higher default number");
+		} else {
+			Birth b = new Birth();
+			b.inputInformation();
+			list[index] = b;
+		}
+		
+		return listB;
+	}
+}

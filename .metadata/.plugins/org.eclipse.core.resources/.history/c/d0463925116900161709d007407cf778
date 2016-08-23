@@ -1,0 +1,21 @@
+/**
+ * 
+ */
+package Zoo;
+
+/**
+ * @author hv
+ * @versionb 1.0
+ * @date 23/8/2016
+ */
+public class ZooMain {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package Zoo;
+
+/**
+ * @author hv
+ *
+ */
+public interface Swing {
+
+}

@@ -1,0 +1,33 @@
+/**
+ * 
+ */
+package Zoo;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+
+/**
+ * @author hv
+ * @versionb 1.0
+ * @date 23/8/2016
+ */
+public class ZooMain {
+
+	public static int max = 50;
+	
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
+		
+		Birth[] listBirth = new Birth[max];
+		Tiger[] listTiger = new Tiger[max];
+		Fish[] listFish = new Fish[max];
+		Boa[] listBoa = new Boa[max];
+	}
+
+}
