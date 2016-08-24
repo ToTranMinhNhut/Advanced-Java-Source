@@ -10,7 +10,8 @@ import org.junit.runner.notification.Failure;
 
 /**
  * @author hv
- *
+ * @version 1.0
+ * @date 24/8/2016
  */
 public class ShapTestRuner {
 
