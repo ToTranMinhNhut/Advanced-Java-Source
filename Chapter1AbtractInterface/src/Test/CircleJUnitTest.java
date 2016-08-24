@@ -55,7 +55,7 @@ public class CircleJUnitTest {
 	}
 
 	@Test
-	public void testPerimeter() {
+	public void testPerimeter1() {
 		double ex = 18.84;
 		
 		c.setR(3);
@@ -64,4 +64,73 @@ public class CircleJUnitTest {
 		assertEquals(ex, ac, 0.01);
 	}
 	
+	@Test
+	public void testPerimeter2() {
+		double ex = 12.56;
+		
+		c.setR(2);
+		
+		double ac = c.perimeter();
+		assertEquals(ex, ac, 0.01);
+	}
+	
+	@Test
+	public void testPerimeter3() {
+		double ex = 19;
+		
+		c.setR(3);
+		
+		double ac = c.perimeter();
+		assertNotEquals(ex, ac, 0.01);
+	}
+	
+	@Test
+	public void testPerimeter4() {
+		double ex = 12;
+		
+		c.setR(2);
+		
+		double ac = c.perimeter();
+		assertNotEquals(ex, ac, 0.01);
+	}
+	
+	@Test
+	public void testArea1() {
+		double ex = 12.566;
+		
+		c.setR(2);
+		
+		double ac = c.area();
+		assertEquals(ex, ac, 0.01);
+	}
+	
+	@Test
+	public void testArea2() {
+		double ex = 28.274;
+		
+		c.setR(3);
+		
+		double ac = c.area();
+		assertEquals(ex, ac, 0.01);
+	}
+	
+	@Test
+	public void testArea3() {
+		double ex = 13;
+		
+		c.setR(2);
+		
+		double ac = c.area();
+		assertNotEquals(ex, ac, 0.01);
+	}
+	
+	@Test
+	public void testArea4() {
+		double ex = 28;
+		
+		c.setR(3);
+		
+		double ac = c.area();
+		assertNotEquals(ex, ac, 0.01);
+	}
 }
