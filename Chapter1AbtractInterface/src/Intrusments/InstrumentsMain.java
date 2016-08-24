@@ -51,36 +51,36 @@ public class InstrumentsMain {
 			throw new ArithmeticException("Please enter 1 or 2.");
 		} else if (opt == 1) {
 			int numString = 0;
-			
+
 			try {
 				System.out.println("Please enter number string: ");
 				numString = Integer.parseInt(input.readLine());
 			} catch (NumberFormatException e) {
 				System.out.println("Error: " + e.toString());
 			}
-			
+
 			StringedIntrusment stringIns = new StringedIntrusment(numString);
-			
+
 			stringIns.setName(name);
 			stringIns.setManufacturer(manufacturer);
-			
+
 			System.out.println("Play Instrument: " + stringIns.play());
-			
+
 		} else if (opt == 2) {
 			String methodPlay = "";
-			
+
 			try {
 				System.out.println("Please enter method play: ");
 				methodPlay = input.readLine();
-				
+
 			} catch (NumberFormatException e) {
 				System.out.println("Error: " + e.toString());
 			}
-			
+
 			NonStringedInstrument nonStringIns = new NonStringedInstrument(methodPlay);
 			nonStringIns.setManufacturer(manufacturer);
 			nonStringIns.setName(name);
-			
+
 			System.out.println("Play instrument: " + nonStringIns.play());
 		}
 	}
