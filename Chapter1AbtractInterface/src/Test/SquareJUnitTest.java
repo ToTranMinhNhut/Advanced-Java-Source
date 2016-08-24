@@ -19,7 +19,7 @@ import Shape.Square;
  * @date 23/8/2016
  * 
  * JUnitTest for perimeter() method and area() method in Square class
- * Input: not
+ * Input not
  * Output: pass
  */
 public class SquareJUnitTest {
