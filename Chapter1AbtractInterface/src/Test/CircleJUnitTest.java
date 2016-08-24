@@ -11,12 +11,21 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-/**
- * @author minhnhutvaio
- *
- */
-public class ShapeJUnitTest {
+import Shape.Cirlce;
 
+/**
+ * @author hv
+ * @version 1.0
+ * @date 23/8/2016
+ * 
+ * JUnitTest for perimeter() method and area() in Cirlce class
+ * Input: not
+ * Output: pass
+ */
+public class CircleJUnitTest {
+	
+	Cirlce c = new Cirlce();
+	
 	/**
 	 * @throws java.lang.Exception
 	 */
@@ -46,8 +55,13 @@ public class ShapeJUnitTest {
 	}
 
 	@Test
-	public void test() {
-		fail("Not yet implemented");
+	public void testPerimeter() {
+		double ex = 18.84;
+		
+		c.setR(3);
+		
+		double ac = c.perimeter();
+		assertEquals(ex, ac, 0.01);
 	}
-
+	
 }

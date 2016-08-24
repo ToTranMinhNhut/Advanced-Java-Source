@@ -9,10 +9,10 @@ package Shape;
  * @date 23/8/2016
  */
 public class Square extends Shape{
-	
+
 	public double side ;
-	
-	
+
+
 	public Square() {
 	}
 
@@ -43,8 +43,11 @@ public class Square extends Shape{
 	 */
 	@Override
 	public double area() {
-		return side * side;
+
+		if (side < 0) {
+			return 0;
+		} else {
+			return side * side;
+		}
 	}
-	
-	
 }

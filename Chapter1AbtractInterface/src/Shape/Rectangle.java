@@ -9,10 +9,10 @@ package Shape;
  * @date 23/6/2016
  */
 public class Rectangle extends Shape{
-	
+
 	public double height;
 	public double weight;
-	
+
 	public Rectangle() {
 	}
 
@@ -43,7 +43,7 @@ public class Rectangle extends Shape{
 		return ( height + weight ) * 2;
 	}
 
-	
+
 	/* (non-Javadoc)
 	 * This method calculate area of rectangle
 	 * Input: not
@@ -52,10 +52,15 @@ public class Rectangle extends Shape{
 	 */
 	@Override
 	public double area() {
-		return height * weight;
+
+		if (height < 0 && weight < 0) {
+			return 0;
+		} else {
+			return height * weight;
+		}
 	}
-		
-	
-	
-	
+
+
+
+
 }
