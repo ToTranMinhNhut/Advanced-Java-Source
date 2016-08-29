@@ -1,3 +1,4 @@
+package SaleProduct;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -12,7 +13,7 @@ import java.io.InputStreamReader;
 public abstract class Card implements Payment {
 
     protected String idCard;
-
+    
     public Card(){
     }
 
@@ -56,6 +57,6 @@ public abstract class Card implements Payment {
      * @see Payment#pay()
      */
     @Override
-    public abstract void pay();
+    public abstract void pay(Order order);
     
 }

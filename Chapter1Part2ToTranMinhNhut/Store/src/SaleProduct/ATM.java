@@ -1,3 +1,4 @@
+package SaleProduct;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -12,7 +13,7 @@ import java.io.InputStreamReader;
 public class ATM extends Card {
 
     private double balance;
-
+    
     public ATM(){
 
     }
@@ -61,9 +62,22 @@ public class ATM extends Card {
 
     /* (non-Javadoc)
      * @see Card#pay()
+     * This method pay a order
+     * Input: the 'order' variable has Order type
+     * Output: not
      */
     @Override
-    public void pay() {
+    public void pay(Order order) {
+    	
+    	if (balance < order.calPriceOrder()) {
+    		System.out.println("The balance is not enough to pay order.");
+    	} else {
+    		
+    		// update state of order
+    		order.setState("Was pay");
+    		
+    		System.out.println("The order was pay");
+    	}
     }
     
 }
