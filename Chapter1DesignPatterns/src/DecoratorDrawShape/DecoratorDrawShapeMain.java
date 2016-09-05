@@ -20,13 +20,17 @@ public class DecoratorDrawShapeMain {
      */
     public static void main(String[] args) throws IOException {
 
+        /*
+         * The codes below make draw a shape and decorate it
+         * Firstly, choose a shape between circle and rectangle
+         * Secondly, choose decoration if want to decorate the shape
+         */
         BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
 
         String optionShape = "";
         int choice = 0;
 
         System.out.println("Please enter a shape: <Circle or Rectangle>: ");
-
         try {
             optionShape = input.readLine();
         } catch (NumberFormatException e) {
@@ -73,7 +77,6 @@ public class DecoratorDrawShapeMain {
             } else {
                 System.out.println(rectangle.draw() + " with normal border.");
             }
-            
         } else {
             throw new ArithmeticException("Please only enter circle or rectangle.");
         }
