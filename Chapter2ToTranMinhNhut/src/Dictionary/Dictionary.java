@@ -45,9 +45,9 @@ public class Dictionary {
     }
 
     /*
-     * 
-     * 
-     * 
+     * This method is used for viewing all of words in dictionary
+     * Input nothing
+     * Output nothing
      */
     public void viewDictionary() {
         int countWord = 0;
@@ -61,20 +61,41 @@ public class Dictionary {
     }
     
     /*
-     * 
-     * 
-     * 
+     * This method is used for adding a new word english to dictionary
+     * Input nothing
+     * Output nothing
      */
     public void addNewWord(WordEnglish word) {
-        
+        listWord.put(word.getWord(), word.getMeaning());
     }
     
     /*
-     * 
-     * 
-     * 
+     * This method is used for searching a word in dictionary 
+     * Input nothing
+     * Output nothing
      */
-    public void removeWord(WordEnglish word) {
+    public void searchWord(String word) {
         
+        if (listWord.containsKey(word)) {
+            Object meaning = listWord.get(word);
+            System.out.println("Result searching: " + word + " - " + meaning);
+        } else {
+            System.out.println("The word do not exists.");
+        }
+    }
+    
+    /*
+     * This method is used for removing a word in dictionary
+     * Input nothing
+     * Output nothing
+     */
+    public void removeWord(String word) {
+        Object meaning = listWord.get(word);
+
+        if (listWord.remove(word) == null) {
+            System.out.println("The word do not exists.");
+        } else {
+            System.out.println("Removed sucessful - word: " + word + " - " + meaning);
+        }
     }
 }
