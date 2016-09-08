@@ -44,7 +44,7 @@ public class ListStudent {
     public void viewListInformationStudent() {
         int countStudent = 0;
         
-        for (Object id : listStudent.keySet()) {
+        for (String id : listStudent.keySet()) {
             Student student = listStudent.get(id);
             
             System.out.println("-----Information student" + (countStudent + 1) + "-----");

@@ -99,6 +99,7 @@ public class Student implements Comparable<Student>{
      * Output nothing
      */
     public void printInformation() {
+        System.out.println("Id of student: " + id);
         System.out.println("Name of student: " + name);
         System.out.println("Age of student: " + age);
         System.out.println("Place of birth's student: " + placeOfBirth);

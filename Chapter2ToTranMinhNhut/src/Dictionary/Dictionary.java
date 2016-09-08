@@ -25,7 +25,7 @@ public class Dictionary {
         listWord = new TreeMap<String, String>();
     }
     
-    public Dictionary(Map listWord) {
+    public Dictionary(Map<String, String> listWord) {
         super();
         this.listWord = listWord;
     }
@@ -33,14 +33,14 @@ public class Dictionary {
     /**
      * @return the listWord
      */
-    public Map getListWord() {
+    public Map<String, String> getListWord() {
         return listWord;
     }
 
     /**
      * @param listWord the listWord to set
      */
-    public void setListWord(Map listWord) {
+    public void setListWord(Map<String, String> listWord) {
         this.listWord = listWord;
     }
 
