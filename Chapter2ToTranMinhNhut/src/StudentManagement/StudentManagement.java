@@ -6,11 +6,14 @@ package StudentManagement;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Map;
+import java.util.TreeMap;
 
 
 /**
  * @author minhnhutvaio
- *
+ * @version 1.0
+ * @sine 8/9/2016
  */
 public class StudentManagement {
 
@@ -21,9 +24,13 @@ public class StudentManagement {
     public static void main(String[] args) throws IOException {
         
         BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
+                
+        Map<String, Student> demoListStudent = new TreeMap<String, Student>();
+        Student demoStudent = new Student("st1", "Joe", "25", "New York");
+        demoListStudent.put("st1", demoStudent);
         
         ListStudent listStudent = new ListStudent();
-        
+        listStudent.setListStudent(demoListStudent);
         /*
          * To choose and make a function among four functions below.
          * When function finish, you can choose out program or continue to make program

@@ -8,6 +8,8 @@ import java.util.TreeMap;
 
 
 /**
+ * This class is used for processing businesses of instance list student
+ * 
  * @author minhnhutvaio
  * @version 1.0
  * @since 8/9/2016
@@ -35,18 +37,19 @@ public class ListStudent {
     }
     
     /*
-     * This method is used for viewing all of words in dictionary
+     * This method is used for viewing all of students in list's student
      * Input nothing
      * Output nothing
      */
     public void viewListInformationStudent() {
-        int countWord = 0;
+        int countStudent = 0;
         
         for (Object id : listStudent.keySet()) {
             Student student = listStudent.get(id);
-         
+            
+            System.out.println("-----Information student" + (countStudent + 1) + "-----");
             student.printInformation();
-            countWord++;
+            countStudent++;
         }
     }
     
@@ -75,7 +78,7 @@ public class ListStudent {
     }
     
     /*
-     * This method is used for removing a word in dictionary
+     * This method is used for removing a student in list's student
      * Input nothing
      * Output nothing
      */

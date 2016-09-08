@@ -9,6 +9,8 @@ import java.io.InputStreamReader;
 
 
 /**
+ * This class is used for processing businesses of instance student
+ * 
  * @author minhnhutvaio
  * @version 1.0
  * @since 8/9/2016
