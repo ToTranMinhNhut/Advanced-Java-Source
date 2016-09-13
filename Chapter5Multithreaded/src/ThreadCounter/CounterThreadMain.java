@@ -3,10 +3,6 @@
  */
 package ThreadCounter;
 
-import java.util.Random;
-import java.util.Scanner;
-
-
 /**
  * @author hv
  * @version 1.0
@@ -20,26 +16,21 @@ public class CounterThreadMain {
      */
     public static void main(String[] args) throws InterruptedException {
 
-        int[] arr = new int[10];
-        int count = count(arr, 10);
-        System.out.println("Sum: " + count);
-    }
-    // Sum of arr
-    public static int count(int[] arr, int numThreads) throws InterruptedException {
-        int len = arr.length;
-        int count = 0;
-        // Create and start numThreads.
-        CounterThread[] ts = new CounterThread[numThreads];
-        for (int i = 0; i < numThreads; i++) {
-            ts[i] = new CounterThread((i * len) / numThreads, ((i + 1) * len /numThreads), arr);
-            ts[i].start();
-            Thread.sleep(1000);
+        //create 10 thread
+        CounterThread[] listCounterThread = new CounterThread[10];
+
+        for (int i = 0; i < 10; i++) {
+            listCounterThread[i] = new CounterThread();
+            String s = (i + 1) + "";
+            listCounterThread[i].setName(s);
         }
-        // Wait for the threads to finish and sum their results.
-        for (int i = 0; i < numThreads; i++) {
-            ts[i].join();
-            count = ts[i].getSum();
+        
+        //start and join 10 thread
+        for (int i = 0; i < 10; i++) {
+            listCounterThread[i].start();;
+            listCounterThread[i].join();
         }
-        return count;
     }
 }
+
+

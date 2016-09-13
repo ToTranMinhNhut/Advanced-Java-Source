@@ -7,6 +7,7 @@ package MultipleLanguagesCDManagement;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.ResourceBundle;
 
 /**
  *
@@ -56,12 +57,12 @@ public class ListCD {
      * Input: the 'numOfCD' has int type and 'list' array has CD type
      * Output: not
      */
-    public void printListCD() {
+    public void printListCD(ResourceBundle message) {
        int countCD = 0;
        
        for (CD cd : listCD) {
            System.out.println("-----------CD " + (countCD + 1) + "----------");
-           cd.printInformationCD();
+           cd.printInformationCD(message);
            countCD++;
            System.out.println("--------------------------");
        }

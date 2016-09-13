@@ -8,6 +8,7 @@ package MultipleLanguagesCDManagement;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ResourceBundle;
 
 /**
  *
@@ -80,13 +81,13 @@ public class CD implements Comparable<CD>{
      * Input: not
      * Output: not
      */
-    public void printInformationCD () {
+    public void printInformationCD (ResourceBundle message) {
 
-        System.out.println("Id: " + id);
-        System.out.println("Name: " + name);
-        System.out.println("Singer: " + singer);
-        System.out.println("Num of song: " + numOfSong);
-        System.out.println("Price of CD: " + price);
+        System.out.println(message.getString("id") + ": " + id);
+        System.out.println(message.getString("name") + ": " + name);
+        System.out.println(message.getString("singer") + ": " + singer);
+        System.out.println(message.getString("number") + ": " + numOfSong);
+        System.out.println(message.getString("price") + ": " + price);
     }
 
     /*
@@ -94,23 +95,23 @@ public class CD implements Comparable<CD>{
      * Input nothing
      * Output nothing
      */
-    public void inputInformation() throws IOException {
+    public void inputInformation(ResourceBundle message) throws IOException {
         BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
 
         try {
-            System.out.println("Please enter id of cd: ");
+            System.out.println(message.getString("id"));
             id = input.readLine();
 
-            System.out.println("Please enter name of cd: ");
+            System.out.println(message.getString("name"));
             name = input.readLine();
 
-            System.out.println("Please enter singer of cd: ");
+            System.out.println(message.getString("singer"));
             singer = input.readLine();
 
-            System.out.println("Please enter the number song of cd: ");
+            System.out.println(message.getString("number"));
             numOfSong = Integer.parseInt(input.readLine());
 
-            System.out.println("Please enter price of cd: ");
+            System.out.println(message.getString("price"));
             price = Double.parseDouble(input.readLine());
         } catch (NumberFormatException e) {
             System.out.println("Error: " + e.toString());
