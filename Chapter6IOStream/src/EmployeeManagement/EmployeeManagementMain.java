@@ -56,52 +56,55 @@ public class EmployeeManagementMain {
                     lst.add(e);
                 }
 
-            } catch (IOException e) {
+
+
+            } catch (Exception e) {
                 System.out.println("Error: " + e.getMessage());
             }
-            
+
             for (Employee employee : lst) {
                 System.out.println(employee.toString());
             }
 
         } else if (opt == 2) {
 
-           
+
 
         } else if (opt == 3) {
-            
+
             System.out.println("Please enter name: ");
             String name = input.readLine();
-            
+
             System.out.println("Please enter coefficient: ");
             Float coefficient = Float.parseFloat(input.readLine());
-            
+
             System.out.println("Please enter counter people: ");
             int countPeople = Integer.parseInt(input.readLine());
-            
+
             System.out.println("Please enter bonus: ");
             double bonus = Double.parseDouble(input.readLine());
-            
+
             Employee e = new Employee(name, coefficient, countPeople, bonus);
             ObjectOutputStream out;
-            
+
             try  {
                 out = new ObjectOutputStream(new 
                         FileOutputStream("src/EmployeeManagement/employee.txt", true));// {
-                   // @Override
-                    //protected void writeStreamHeader() throws IOException {
-                      //  reset();
-                    //}
+                // @Override
+                //protected void writeStreamHeader() throws IOException {
+                //  reset();
+                //}
                 //};
 
                 out.writeObject(e);
+                out.reset();
                 out.close();
                 System.out.println("Add a employee is success.");
 
             } catch (IOException e1) {
                 System.out.println("Error: " + e1.getMessage());
             }
-            
+
         } else {
             throw new ArithmeticException("The function do not exists.");
         }
