@@ -3,6 +3,9 @@
  */
 package EmployeeManagement;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.Serializable;
 
 /**
@@ -66,5 +69,26 @@ public class Employee implements Serializable {
         return name + "\t" + coefficient + "\t" + countPeople + "\t" + bonus;
     }
     
-    
+  //input employee from user
+    public  static Employee inputEmployee() throws IOException {
+        BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
+        
+        System.out.println("-----Input a Employee-----");
+        System.out.println("Employee name: ");
+        String name = input.readLine();
+        
+        System.out.println("Employee cofficient: ");
+        float coefficient  = Float.parseFloat(input.readLine());
+        
+        System.out.println("Number of people:: ");
+        int countPeople = Integer.parseInt(input.readLine());
+        
+        System.out.println("Employee bonus: ");
+        double bonus = Double.parseDouble(input.readLine());
+        System.out.println("--------------------------------");
+        
+
+        Employee emp = new Employee(name, coefficient, countPeople, bonus);
+        return emp;
+    }
 }
