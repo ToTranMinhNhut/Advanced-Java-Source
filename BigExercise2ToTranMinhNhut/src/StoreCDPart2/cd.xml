@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<CDs>
+	<cd>
+		<id>1</id>
+		<name>in the end</name>
+		<singer>linking park</singer>
+		<numbersongs>10</numbersongs>
+		<price>400.0</price>
+	</cd>
+	<cd>
+		<id>2</id>
+		<name>the sound of silience</name>
+		<singer>simon</singer>
+		<numbersongs>8</numbersongs>
+		<price>300.0</price>
+	</cd>
+	<cd>
+		<id>3</id>
+		<name>phantom of the opera</name>
+		<singer>nightwish</singer>
+		<numbersongs>12</numbersongs>
+		<price>350.0</price>
+	</cd>
+	<cd>
+		<id>4</id>
+		<name>Tình ca</name>
+		<singer>Phạm Duy</singer>
+		<numbersongs>8</numbersongs>
+		<price>250.0</price>
+	</cd>
+	<cd>
+		<id>11</id>
+		<name>Nhac Trinh</name>
+		<singer>Trinh Cong Son</singer>
+		<numbersongs>18</numbersongs>
+		<price>450.0</price>
+	</cd>
+</CDs>
